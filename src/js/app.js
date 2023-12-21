@@ -6,7 +6,6 @@ export default class GameSavingLoader {
     return read()
       .then((data) => json(data))
       .then((jsonData) => JSON.parse(jsonData))
-      .then((gameSaving) => gameSaving)
       .catch((error) => {
         console.error('Error loading game saving:', error);
         throw error; // пробросим ошибку, чтобы её можно было обработать во внешнем коде, если нужно
